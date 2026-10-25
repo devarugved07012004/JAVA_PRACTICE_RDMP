@@ -198,35 +198,35 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     4. In `main`: fill → print → reverse → print → print max/min.
     5. **Done when:** All methods used from `main` and output matches the data.
 
-- [ ] **Day 11 — Search & frequency**
-  - [ ] **Learn:** [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html) (revisit traversal)
-  - [ ] **Practice:** Linear search + count
+- [x] **Day 11 — Search & frequency**
+  - [x] **Learn:** [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html) (revisit traversal)
+  - [x] **Practice:** Linear search + count
     1. Add `indexOf(int[] a, int target)` → first index or `-1`.
     2. Add `count(int[] a, int target)` → how many times target appears.
     3. Test with array containing duplicates; print index and count for two targets (one missing).
     4. **Done when:** Missing target returns `-1` / `0` and present target is correct.
 
-- [ ] **Day 12 — Methods & overloading**
-  - [ ] **Learn:** [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) · [Passing Information to a Method](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html) · [Returning a Value](https://docs.oracle.com/javase/tutorial/java/javaOO/returnvalue.html)
-  - [ ] **Practice:** Overload `max` and thin `main`
+- [x] **Day 12 — Methods & overloading**
+  - [x] **Learn:** [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) · [Passing Information to a Method](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html) · [Returning a Value](https://docs.oracle.com/javase/tutorial/java/javaOO/returnvalue.html)
+  - [x] **Practice:** Overload `max` and thin `main`
     1. Create `max(int a, int b)` and `max(int a, int b, int c)` (overload).
     2. Move Day 10 helpers into this class or call them if same package.
     3. From `main`, call both `max` overloads and print results.
     4. Confirm: changing an `int` parameter inside a method does not change caller’s variable (print before/after).
     5. **Done when:** Overloads resolve correctly and call-by-value demo is noted.
 
-- [ ] **Day 13 — 2D arrays**
-  - [ ] **Learn:** [Arrays (multidimensional section)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
-  - [ ] **Practice:** Small matrix ops
+- [x] **Day 13 — 2D arrays**
+  - [x] **Learn:** [Arrays (multidimensional section)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+  - [x] **Practice:** Small matrix ops
     1. Create `int[][] m = { {1,2,3}, {4,5,6} };`
     2. Method `sum(int[][] m)` returns total of all elements.
     3. Method `printRows` and `printColumns` (nested loops).
     4. Method `transpose` for a rectangular matrix; print result.
     5. **Done when:** Sum is 21 for sample; transpose prints 3×2 correctly.
 
-- [ ] **Day 14 — Mixed drill**
-  - [ ] **Learn:** [Language Basics trail hub](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html) (quick recap)
-  - [ ] **Practice:** Five problems, no peeking at old solutions first
+- [x] **Day 14 — Mixed drill**
+  - [x] **Learn:** [Language Basics trail hub](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html) (quick recap)
+  - [x] **Practice:** Five problems, no peeking at old solutions first
     1. Create `Week2Drill.java`. Solve each in its own method:
     2. Factorial of n (loop).
     3. Count primes from 1..n.
@@ -239,18 +239,18 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
 
 ### Week 3 — Strings, I/O, packages (Days 15–21)
 
-- [ ] **Day 15 — String methods**
-  - [ ] **Learn:** [Strings](https://docs.oracle.com/javase/tutorial/java/data/strings.html) · `String` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
-  - [ ] **Practice:** String API drill
+- [x] **Day 15 — String methods**
+  - [x] **Learn:** [Strings](https://docs.oracle.com/javase/tutorial/java/data/strings.html) · `String` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
+  - [x] **Practice:** String API drill
     1. Create `StringDrill.java` with a sample string `"Java Fundamentals"`.
     2. Print length, `charAt(0)`, `substring(0, 4)`, `toLowerCase()`, `toUpperCase()`.
     3. Compare `"java"` with `"Java"` using `==`, `equals`, `equalsIgnoreCase` — print all three results.
     4. Write one sentence in notes: why `==` is wrong for content.
     5. **Done when:** Prints match expectations and notes mention `equals`.
 
-- [ ] **Day 16 — String exercises**
-  - [ ] **Learn:** [Comparing Strings](https://docs.oracle.com/javase/tutorial/java/data/comparestrings.html) · [Manipulating Characters in a String](https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html)
-  - [ ] **Practice:** Palindrome, vowels, reverse words
+- [x] **Day 16 — String exercises**
+  - [x] **Learn:** [Comparing Strings](https://docs.oracle.com/javase/tutorial/java/data/comparestrings.html) · [Manipulating Characters in a String](https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html)
+  - [x] **Practice:** Palindrome, vowels, reverse words
     1. `isPalindrome(String s)` — ignore case; test `"Racecar"` and `"hello"`.
     2. `countVowels(String s)` — count aeiouAEIOU.
     3. `reverseWords(String sentence)` — `"one two three"` → `"three two one"` (split on spaces).
