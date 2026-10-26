@@ -24,8 +24,8 @@ public class OperatorsLab {
         System.out.println("(2 + 3) * 4 = " + ((2 + 3) * 4));
 
         // Short Circuit
-        System.out.println(false && boom());
-        System.out.println(true || boom());
+        // System.out.println(false && boom());
+        // System.out.println(true || boom());
 
         System.out.println(true && boom());
         System.out.println(false || boom());

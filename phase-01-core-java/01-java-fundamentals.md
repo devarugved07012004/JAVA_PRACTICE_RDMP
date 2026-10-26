@@ -257,9 +257,9 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     4. Call all three from `main` with printed results.
     5. **Done when:** All three methods pass your test cases.
 
-- [ ] **Day 17 — Scanner & console I/O**
-  - [ ] **Learn:** [I/O Streams (intro)](https://docs.oracle.com/javase/tutorial/essential/io/streams.html) · `Scanner` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html) · `System` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/System.html)
-  - [ ] **Practice:** Safe console input
+- [x] **Day 17 — Scanner & console I/O**
+  - [x] **Learn:** [I/O Streams (intro)](https://docs.oracle.com/javase/tutorial/essential/io/streams.html) · `Scanner` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html) · `System` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/System.html)
+  - [x] **Practice:** Safe console input
     1. Create `SafeInput.java`. Use `Scanner` on `System.in`.
     2. Prompt for a name with `nextLine()`.
     3. Prompt for an age: read with `nextLine()`, then `Integer.parseInt` inside try/catch (or check digits).
@@ -267,9 +267,9 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     5. Print `"Hello, <name> (<age>)"`.
     6. **Done when:** Invalid age does not crash; valid path prints greeting.
 
-- [ ] **Day 18 — Menu-driven program**
-  - [ ] **Learn:** Reuse [switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html) + [while](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
-  - [ ] **Practice:** Menu skeleton
+- [x] **Day 18 — Menu-driven program**
+  - [x] **Learn:** Reuse [switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html) + [while](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
+  - [x] **Practice:** Menu skeleton
     1. Create `MenuApp.java` with `boolean running = true` while-loop.
     2. Each iteration print: `1) Add  2) List  3) Quit`.
     3. Read choice; `switch` to call `add()`, `list()`, or set `running = false`.
@@ -278,8 +278,8 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     6. **Done when:** Quit exits cleanly; Add/List print stubs.
 
 - [ ] **Day 19 — Packages**
-  - [ ] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html) · [Using Package Members](https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html)
-  - [ ] **Practice:** Multi-file package project
+  - [x] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html) · [Using Package Members](https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html)
+  - [x] **Practice:** Multi-file package project
     1. Create folders `src/com/learn/basics/`.
     2. Put `Greeter.java` in that package with method `greet(String name)`.
     3. Put `Main.java` in the same package; call `Greeter` from `main`.
@@ -294,9 +294,9 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     3. From `Main`, print `MathUtils.PI` and results of clamp for three cases (below min, in range, above max).
     4. **Done when:** No `MathUtils` instance created; all calls are static.
 
-- [ ] **Day 21 — Coding best practices**
-  - [ ] **Learn:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) · [Oracle Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)
-  - [ ] **Practice:** Refactor one earlier program
+- [x] **Day 21 — Coding best practices**
+  - [x] **Learn:** [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) · [Oracle Code Conventions](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)
+  - [x] **Practice:** Refactor one earlier program
     1. Pick Day 17 or Day 18 source.
     2. Rename files/classes to clear names if needed.
     3. Extract methods until `main` is ≤10 lines.
