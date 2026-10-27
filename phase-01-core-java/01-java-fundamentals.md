@@ -277,7 +277,7 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     5. Run and walk through all three choices.
     6. **Done when:** Quit exits cleanly; Add/List print stubs.
 
-- [ ] **Day 19 — Packages**
+- [x] **Day 19 — Packages**
   - [x] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html) · [Using Package Members](https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html)
   - [x] **Practice:** Multi-file package project
     1. Create folders `src/com/learn/basics/`.
@@ -286,9 +286,9 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
     4. Compile/run from IDE **or** CLI from `src`: `javac com/learn/basics/*.java` then `java com.learn.basics.Main`.
     5. **Done when:** Program runs with package declaration present (not default package).
 
-- [ ] **Day 20 — static & constants**
-  - [ ] **Learn:** [Understanding Class Members (static)](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html) · [More on classes](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
-  - [ ] **Practice:** Utility class
+- [x] **Day 20 — static & constants**
+  - [x] **Learn:** [Understanding Class Members (static)](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html) · [More on classes](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+  - [x] **Practice:** Utility class
     1. Create `com.learn.basics.MathUtils` with `public static final double PI = 3.14159;`
     2. Add `static int clamp(int value, int min, int max)`.
     3. From `Main`, print `MathUtils.PI` and results of clamp for three cases (below min, in range, above max).
@@ -308,62 +308,62 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
 
 ### Week 4 — Consolidation & mini-projects (Days 22–28)
 
-- [ ] **Day 22 — Command-line args**
-  - [ ] **Learn:** [Command-Line Arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html) · `javac`[/](https://docs.oracle.com/en/java/javase/17/docs/specs/man/index.html)`java` [tools](https://docs.oracle.com/en/java/javase/17/docs/specs/man/index.html)
-  - [ ] **Practice:** CLI calculator
+- [x] **Day 22 — Command-line args**
+  - [x] **Learn:** [Command-Line Arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html) · `javac`[/](https://docs.oracle.com/en/java/javase/17/docs/specs/man/index.html)`java` [tools](https://docs.oracle.com/en/java/javase/17/docs/specs/man/index.html)
+  - [x] **Practice:** CLI calculator
     1. Create `CliCalc.java`. Expect args like: `add 3 4` or `mul 2 5`.
     2. If `args.length != 3`, print usage `java CliCalc <add|sub|mul|div> <a> <b>` and exit.
     3. Parse two numbers; switch on operation; print result.
     4. Run from terminal with good args and bad args.
     5. **Done when:** Good path prints result; bad path prints usage (no crash).
 
-- [ ] **Day 23 — Casting & overflow**
-  - [ ] **Learn:** [Primitive Data Types (conversions)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) · [Conversion and Casting](https://docs.oracle.com/en/java/javase/specs/jls/se17/html/jls-5.html) (skim)
-  - [ ] **Practice:** Safe conversion helpers
+- [x] **Day 23 — Casting & overflow**
+  - [x] **Learn:** [Primitive Data Types (conversions)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) · [Conversion and Casting](https://docs.oracle.com/en/java/javase/specs/jls/se17/html/jls-5.html) (skim)
+  - [x] **Practice:** Safe conversion helpers
     1. Show widening: assign `int` to `long` (no cast) and print.
     2. Show narrowing: cast `double` 3.9 to `int` and print (truncation).
     3. Write `safeToByte(int n)` that returns `Byte`/`null` or throws if out of byte range — your choice, document it.
     4. Test with 100, 200, -200.
     5. **Done when:** Tests show which values are accepted vs rejected.
 
-- [ ] **Day 24 — Mini-project A (start)**
-  - [ ] **Learn:** Skim your notes + [Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
-  - [ ] **Practice:** Unit Converter — core path
+- [x] **Day 24 — Mini-project A (start)**
+  - [x] **Learn:** Skim your notes + [Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
+  - [x] **Practice:** Unit Converter — core path
     1. Create package `converter` with `Main` and `TemperatureConverter`.
     2. Implement C→F and F→C methods.
     3. Menu: `1) C to F  2) F to C  0) Quit`.
     4. Hardcode or read one value; print converted result.
     5. **Done when:** Both conversions work for at least one input each; quit works.
 
-- [ ] **Day 25 — Mini-project A (finish)**
-  - [ ] **Learn:** `Scanner` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html) (validation patterns)
-  - [ ] **Practice:** Harden converter
+- [x] **Day 25 — Mini-project A (finish)**
+  - [x] **Learn:** `Scanner` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html) (validation patterns)
+  - [x] **Practice:** Harden converter
     1. Add length or weight family (at least one more: e.g. km↔miles).
     2. Validate numeric input (re-prompt on bad input).
     3. Keep looping until quit.
     4. Ensure `main` only orchestrates; conversion math stays in helper classes.
     5. **Done when:** Invalid input doesn’t crash; two conversion families work.
 
-- [ ] **Day 26 — Mini-project B (start)**
-  - [ ] **Learn:** Revisit [Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) + [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
-  - [ ] **Practice:** Expense Tracker — add & list
+- [x] **Day 26 — Mini-project B (start)**
+  - [x] **Learn:** Revisit [Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html) + [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+  - [x] **Practice:** Expense Tracker — add & list
     1. Create package `expenses` with fixed-size arrays (e.g. capacity 50) for category, amount, note.
     2. Menu: Add / List / Quit.
     3. `addExpense` stores next free slot; reject when full.
     4. `listExpenses` prints all used slots.
     5. **Done when:** You can add 2+ expenses and list them.
 
-- [ ] **Day 27 — Mini-project B (finish)**
-  - [ ] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
-  - [ ] **Practice:** Totals + README
+- [x] **Day 27 — Mini-project B (finish)**
+  - [x] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
+  - [x] **Practice:** Totals + README
     1. Add `totalAll()` and `totalByCategory(String category)`.
     2. Menu options to print those totals.
     3. Write a short `README.md` in the project folder: how to compile/run.
     4. **Done when:** Totals match manual math for your sample data; README exists.
 
-- [ ] **Day 28 — Mastery gate**
-  - [ ] **Learn:** Recap [Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html) · [Java SE API hub](https://docs.oracle.com/en/java/javase/17/docs/api/)
-  - [ ] **Practice:** Checklist + rewrite
+- [x] **Day 28 — Mastery gate**
+  - [x] **Learn:** Recap [Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html) · [Java SE API hub](https://docs.oracle.com/en/java/javase/17/docs/api/)
+  - [x] **Practice:** Checklist + rewrite
     1. Open §12 Mastery checklist; tick only what you can demo without notes.
     2. Pick one program from Days 1–7; rewrite it with packages, methods, and clear names.
     3. Run old vs new mentally — list 3 improvements you made.
@@ -384,37 +384,37 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
 
 ### Warm-ups
 
-- [ ] Celsius ↔ Fahrenheit converter — [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
-- [ ] Swap two numbers (with/without temp) — [Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
-- [ ] Factorial (loop), Fibonacci (first N) — [for Statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
-- [ ] Prime check; print primes up to N — [while / do-while](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
-- [ ] Count digits; reverse an integer (watch overflow) — [Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
-- [ ] Simple / compound interest calculators — [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
+- [x] Celsius ↔ Fahrenheit converter — [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
+- [x] Swap two numbers (with/without temp) — [Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+- [x] Factorial (loop), Fibonacci (first N) — [for Statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html)
+- [x] Prime check; print primes up to N — [while / do-while](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
+- [x] Count digits; reverse an integer (watch overflow) — [Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [x] Simple / compound interest calculators — [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
 
 
 
 ### Arrays & methods
 
-- [ ] Second-largest in an array — [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
-- [ ] Remove duplicates from a sorted array — [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
-- [ ] Merge two sorted arrays — [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-- [ ] Matrix addition and transpose — [Arrays (2D)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
-- [ ] Character frequency in a string — `String` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
+- [x] Second-largest in an array — [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+- [x] Remove duplicates from a sorted array — [Arrays](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+- [x] Merge two sorted arrays — [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+- [x] Matrix addition and transpose — [Arrays (2D)](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+- [x] Character frequency in a string — `String` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 
 
 ### I/O & structure
 
-- [ ] Student marks → average, highest, pass/fail — `[Scanner](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html)`
-- [ ] Number guessing game (random + hints) — `Math` [/ random](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html)
-- [ ] Multi-file `MathUtils` + `Main` in a package — [Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
+- [x] Student marks → average, highest, pass/fail — `[Scanner](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html)`
+- [x] Number guessing game (random + hints) — `Math` [/ random](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html)
+- [x] Multi-file `MathUtils` + `Main` in a package — [Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
 
 
 
 ### Stretch
 
-- [ ] Tiny `+ - * /` calculator (two operands) — [Command-Line Arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html)
-- [ ] Console TODO list (fixed array + menu) — [switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)
+- [x] Tiny `+ - * /` calculator (two operands) — [Command-Line Arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html)
+- [x] Console TODO list (fixed array + menu) — [switch](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)
 
 ---
 
@@ -547,18 +547,18 @@ This phase trains a daily coding muscle: small programs, console I/O, and readab
 
 ## 12. Mastery checklist
 
-- [ ] JDK installed; `java` and `javac` versions match expectations
-- [ ] Can explain JDK vs JRE vs JVM in plain language
-- [ ] Comfortable with all primitive types and when to use each
-- [ ] Uses operators and understands integer division / precedence
-- [ ] Writes `if`/`else` and `switch` confidently
-- [ ] Uses `for`, `while`, `do-while`, `break`, `continue` correctly
-- [ ] Creates and traverses 1D and 2D arrays
-- [ ] Writes methods with parameters, returns, and overloading
-- [ ] Reads console input safely with `Scanner`
-- [ ] Uses `String` comparisons and common methods correctly
-- [ ] Organizes code into packages with multiple classes
-- [ ] Keeps `main` thin; names variables/methods clearly
-- [ ] Completed at least two mini-projects from §6
-- [ ] Can debug simple compile and runtime errors independently
-- [ ] Ready to start [02-oops.md](02-oops.md)
+- [x] JDK installed; `java` and `javac` versions match expectations
+- [x] Can explain JDK vs JRE vs JVM in plain language
+- [x] Comfortable with all primitive types and when to use each
+- [x] Uses operators and understands integer division / precedence
+- [x] Writes `if`/`else` and `switch` confidently
+- [x] Uses `for`, `while`, `do-while`, `break`, `continue` correctly
+- [x] Creates and traverses 1D and 2D arrays
+- [x] Writes methods with parameters, returns, and overloading
+- [x] Reads console input safely with `Scanner`
+- [x] Uses `String` comparisons and common methods correctly
+- [x] Organizes code into packages with multiple classes
+- [x] Keeps `main` thin; names variables/methods clearly
+- [x] Completed at least two mini-projects from §6
+- [x] Can debug simple compile and runtime errors independently
+- [x] Ready to start [02-oops.md](02-oops.md)
