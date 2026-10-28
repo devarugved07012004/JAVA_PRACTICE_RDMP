@@ -13,6 +13,8 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ---
 
+
+
 ## 2. Prerequisites
 
 - Completed [01-java-fundamentals.md](01-java-fundamentals.md) mastery checklist (≥90%)
@@ -21,45 +23,61 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ---
 
+
+
 ## 3. Concepts to learn (beginner → intermediate → advanced)
+
+
 
 ### Beginner
 
-| Concept | What to internalize |
-|--------|----------------------|
-| Class vs object | Blueprint vs instance; state + behavior |
-| Fields & methods | Instance members; encapsulation instinct |
-| Constructors | Default vs parameterized; `this` |
-| `new` lifecycle | Allocation + constructor run |
-| Access modifiers | `private`, `public`, `protected`, package-private |
-| Getters/setters | When useful; avoid mindless boilerplate |
-| `toString`, `equals`, `hashCode` intro | Identity vs equality (deepen later) |
+
+| Concept                                | What to internalize                               |
+| -------------------------------------- | ------------------------------------------------- |
+| Class vs object                        | Blueprint vs instance; state + behavior           |
+| Fields & methods                       | Instance members; encapsulation instinct          |
+| Constructors                           | Default vs parameterized; `this`                  |
+| `new` lifecycle                        | Allocation + constructor run                      |
+| Access modifiers                       | `private`, `public`, `protected`, package-private |
+| Getters/setters                        | When useful; avoid mindless boilerplate           |
+| `toString`, `equals`, `hashCode` intro | Identity vs equality (deepen later)               |
+
+
+
 
 ### Intermediate
 
-| Concept | What to internalize |
-|--------|----------------------|
-| Inheritance | `extends`, `super`, method overriding |
-| Polymorphism | Compile-time (overloading) vs runtime (overriding) |
-| Abstraction | Abstract classes; “what” vs “how” |
-| Encapsulation | Hide internals; expose a small API |
-| Interfaces | `implements`, multiple interfaces, default/static methods |
-| Composition over inheritance | Prefer “has-a” when inheritance is forced |
-| Association / aggregation / composition | Relationship vocabulary with code examples |
+
+| Concept                                 | What to internalize                                       |
+| --------------------------------------- | --------------------------------------------------------- |
+| Inheritance                             | `extends`, `super`, method overriding                     |
+| Polymorphism                            | Compile-time (overloading) vs runtime (overriding)        |
+| Abstraction                             | Abstract classes; “what” vs “how”                         |
+| Encapsulation                           | Hide internals; expose a small API                        |
+| Interfaces                              | `implements`, multiple interfaces, default/static methods |
+| Composition over inheritance            | Prefer “has-a” when inheritance is forced                 |
+| Association / aggregation / composition | Relationship vocabulary with code examples                |
+
+
+
 
 ### Advanced
 
-| Concept | What to internalize |
-|--------|----------------------|
-| Liskov intuition | Subtypes must honor parent contracts |
-| `final` classes/methods/fields | Design for extension vs safety |
-| Object class methods | Proper `equals`/`hashCode` contracts |
-| Nested / inner / static nested classes | When they clarify ownership |
-| Immutability patterns | Final fields, no setters, defensive copies (intro) |
-| SOLID at a practical level | Especially S, O, D as daily habits (not buzzword drills) |
-| Modeling domains | Entities, value-like objects, service classes |
+
+| Concept                                | What to internalize                                      |
+| -------------------------------------- | -------------------------------------------------------- |
+| Liskov intuition                       | Subtypes must honor parent contracts                     |
+| `final` classes/methods/fields         | Design for extension vs safety                           |
+| Object class methods                   | Proper `equals`/`hashCode` contracts                     |
+| Nested / inner / static nested classes | When they clarify ownership                              |
+| Immutability patterns                  | Final fields, no setters, defensive copies (intro)       |
+| SOLID at a practical level             | Especially S, O, D as daily habits (not buzzword drills) |
+| Modeling domains                       | Entities, value-like objects, service classes            |
+
 
 ---
+
+
 
 ## 4. Daily learning tasks (numbered day blocks)
 
@@ -69,68 +87,70 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ### Week 1 — Classes, objects, encapsulation (Days 1–7)
 
-- [ ] **Day 1 — Classes & objects (`Book`)**
-  - [ ] **Learn:** [What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html) · [Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html) · [Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html)
-  - [ ] **Practice:** Model a `Book` class and create objects
+- [x] **Day 1 — Classes & objects (**`Book`**)**
+  - [x] **Learn:** [What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html) · [Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html) · [Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html)
+  - [x] **Practice:** Model a `Book` class and create objects
     1. Create folder `oops/day01` with `Book.java` and `Main.java`.
     2. In `Book`: fields `title`, `author`, `pages` (public for today only); a constructor taking all three; method `describe()` returning a short string.
     3. In `Main`: create two `Book` objects with different data.
     4. Print each via `describe()` and via field access.
     5. **Done when:** Two distinct books print correctly and `javac`/`java` succeed.
 
-- [ ] **Day 2 — Encapsulation & access**
-  - [ ] **Learn:** [Controlling Access to Members](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html) · [Declaring Member Variables](https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html)
-  - [ ] **Practice:** Private fields with validated setters
+- [x] **Day 2 — Encapsulation & access**
+  - [x] **Learn:** [Controlling Access to Members](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html) · [Declaring Member Variables](https://docs.oracle.com/javase/tutorial/java/javaOO/variables.html)
+  - [x] **Practice:** Private fields with validated setters
     1. Make all `Book` fields `private`.
     2. Add getters; add `setPages(int pages)` that throws `IllegalArgumentException` if `pages <= 0`.
     3. Try `book.setPages(-1)` in `main` inside try/catch; print the message.
     4. Confirm direct `book.pages = 5` no longer compiles.
     5. **Done when:** Invalid pages are rejected and fields are only reachable via methods.
 
-- [ ] **Day 3 — Constructors & chaining**
-  - [ ] **Learn:** [Providing Constructors](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html) · [Using the `this` Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
-  - [ ] **Practice:** Overload and chain constructors
+- [x] **Day 3 — Constructors & chaining**
+  - [x] **Learn:** [Providing Constructors](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html) · [Using the](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html) `this` [Keyword](https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html)
+  - [x] **Practice:** Overload and chain constructors
     1. Add `Book(String title)` that chains to `this(title, "Unknown", 1)`.
     2. Add `Book(String title, String author)` that chains to the full constructor with `pages = 1`.
     3. Keep the full 3-arg constructor as the “real” initializer.
     4. In `main`, construct one book with each overload and print getters.
     5. **Done when:** All three constructors compile and produce sensible defaults.
 
-- [ ] **Day 4 — Collaborating classes**
-  - [ ] **Learn:** [Using Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/usingobject.html) · [OOP Concepts (Association idea)](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
-  - [ ] **Practice:** `Author` + `Book` association
+- [x] **Day 4 — Collaborating classes**
+  - [x] **Learn:** [Using Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/usingobject.html) · [OOP Concepts (Association idea)](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
+  - [x] **Practice:** `Author` + `Book` association
     1. Create `Author.java` with `name`, `email`, constructor, getters, `toString`.
     2. Change `Book` to hold an `Author` reference (not just a String).
     3. In `main`, create one `Author`, two `Book`s pointing at that author.
     4. Print books and show both share the same author object (same name/email).
     5. **Done when:** Changing author name (via setter) is visible through both books’ prints.
 
-- [ ] **Day 5 — static vs instance (OOP)**
-  - [ ] **Learn:** [Understanding Class Members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html) · [Initializing Fields](https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html)
-  - [ ] **Practice:** Instance counter and static factory
+- [x] **Day 5 — static vs instance (OOP)**
+  - [x] **Learn:** [Understanding Class Members](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html) · [Initializing Fields](https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html)
+  - [x] **Practice:** Instance counter and static factory
     1. Add `private static int createdCount` to `Book`; increment in every constructor.
     2. Add `public static int getCreatedCount()`.
     3. Add `public static Book untitled()` returning `new Book("Untitled", new Author("N/A", ""), 1)`.
     4. Create 3 books (mix of constructors + factory); print `getCreatedCount()`.
     5. **Done when:** Count matches how many `Book` instances you constructed.
 
-- [ ] **Day 6 — `toString`**
-  - [ ] **Learn:** [`Object` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html) · [The `Object`s Methods (Oracle)](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html)
-  - [ ] **Practice:** Override `toString` for readable prints
+- [x] **Day 6 —** `toString`
+  - [x] **Learn:** `Object` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html) · [The](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html) `Object`[s Methods (Oracle)](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html)
+  - [x] **Practice:** Override `toString` for readable prints
     1. Override `toString` on `Author` and `Book` with `@Override`.
     2. Format like `Book{title='…', pages=…, author=…}`.
     3. Put books in an array; loop and `System.out.println(book)` (no manual field dumps).
     4. Compare one print before vs after override (default is `Class@hash`).
     5. **Done when:** `println(book)` shows meaningful fields, not only the default Object form.
 
-- [ ] **Day 7 — Mini domain review**
-  - [ ] **Learn:** Skim [Classes & Objects trail](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
-  - [ ] **Practice:** `BankAccount` with validated deposit/withdraw
+- [x] **Day 7 — Mini domain review**
+  - [x] **Learn:** Skim [Classes & Objects trail](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+  - [x] **Practice:** `BankAccount` with validated deposit/withdraw
     1. Create `BankAccount` with private `owner`, `balance`; constructor requiring `balance >= 0`.
     2. `deposit(double amount)` rejects `amount <= 0`.
     3. `withdraw(double amount)` rejects if amount invalid or exceeds balance.
     4. In `main`, run happy path + 2 failure paths (catch and print messages).
     5. **Done when:** Invalid ops leave balance unchanged and print clear errors.
+
+
 
 ### Week 2 — Inheritance & polymorphism (Days 8–14)
 
@@ -143,8 +163,8 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     4. In `main`, construct one of each and print shared + specific fields.
     5. **Done when:** Both subclasses compile and reuse parent fields via `super`.
 
-- [ ] **Day 9 — Overriding & `super`**
-  - [ ] **Learn:** [Using the Keyword `super`](https://docs.oracle.com/javase/tutorial/java/IandI/super.html) · [`@Override` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
+- [ ] **Day 9 — Overriding &** `super`
+  - [ ] **Learn:** [Using the Keyword](https://docs.oracle.com/javase/tutorial/java/IandI/super.html) `super` · `@Override` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
   - [ ] **Practice:** Override with `@Override` and `super`
     1. Override `describe()` in `Car` and `Bike`; each calls `super.describe()` then appends subclass info.
     2. Annotate every override with `@Override`.
@@ -170,7 +190,7 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     4. Store both in `Shape[]`, print name + area.
     5. **Done when:** Areas match hand math (πr², w×h) and abstract instantiation fails.
 
-- [ ] **Day 12 — `final` & stopping inheritance**
+- [ ] **Day 12 —** `final` **& stopping inheritance**
   - [ ] **Learn:** [Writing Final Classes and Methods](https://docs.oracle.com/javase/tutorial/java/IandI/final.html)
   - [ ] **Practice:** `final` method and class lab
     1. Mark `Shape.name()` as `final`; try overriding in `Circle` — fix after seeing compile error.
@@ -178,8 +198,8 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     3. In notes: 3 sentences on when to stop inheritance (`final` class/method).
     4. **Done when:** Both intentional compile errors are observed and notes exist.
 
-- [ ] **Day 13 — `equals` / `hashCode`**
-  - [ ] **Learn:** [Comparing Objects](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html) · [`Objects` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html)
+- [ ] **Day 13 —** `equals` **/** `hashCode`
+  - [ ] **Learn:** [Comparing Objects](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html) · `Objects` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html)
   - [ ] **Practice:** Implement `equals`/`hashCode` for `Book`
     1. Decide identity: two books equal if same `title` + `author.name` (document choice).
     2. Generate or hand-write `equals`/`hashCode` using `Objects.equals` / `Objects.hash`.
@@ -195,6 +215,8 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     3. Either implement a thin `Ebook` **or** write 5–8 sentences explaining why composition/`format` field is better.
     4. Keep compiling code either way.
     5. **Done when:** Journal note exists justifying the choice with a concrete example.
+
+
 
 ### Week 3 — Interfaces & relationships (Days 15–21)
 
@@ -257,6 +279,8 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     4. Write 5 bullets: what each package owns.
     5. **Done when:** Sketch + package bullets exist before writing Week 4 code.
 
+
+
 ### Week 4 — OOP project & polish (Days 22–28)
 
 - [ ] **Day 22 — Project packages**
@@ -316,10 +340,12 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
     1. Open §12 Mastery checklist; tick only what you can demo.
     2. Write a one-page journal note: inheritance used where, composition where, key interfaces.
     3. List 3 design decisions and one thing you’d change next.
-    4. If checklist &lt; 90%, note which days to repeat.
+    4. If checklist < 90%, note which days to repeat.
     5. **Done when:** Checklist reviewed honestly and design note exists.
 
 ---
+
+
 
 ## 5. Hands-on exercises
 
@@ -331,12 +357,16 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 6. **Zoo:** `Animal` with `makeSound()`; demonstrate runtime polymorphism.
 7. **Composition kitchen:** `Order` has `List<LineItem>`; destroying order destroys line items conceptually.
 8. **Aggregation classroom:** `Department` has `Teacher`s that can exist independently.
-9. **Immutable-ish `Money`:** amount + currency; operations return new instances.
+9. **Immutable-ish** `Money`**:** amount + currency; operations return new instances.
 10. **Interface segregation practice:** split a fat `Machine` interface into `Printer`, `ScannerDevice`.
 
 ---
 
+
+
 ## 6. Mini-projects
+
+
 
 ### Primary: Mini Library Domain (OOP)
 
@@ -352,8 +382,9 @@ Console app (in-memory) with packages:
 - Prefer interfaces for search/borrow capabilities.
 - Show at least one polymorphic call site.
 - No database yet.
-
 - **Full steps:** [A — Mini Library Domain](../mini-projects/phase-01-core-java/02-oops/A-mini-library-domain.md)
+
+
 
 ### Alternative: Mini Shop
 
@@ -362,6 +393,8 @@ Console app (in-memory) with packages:
 - **Full steps:** [B — Mini Shop](../mini-projects/phase-01-core-java/02-oops/B-mini-shop.md)
 
 ---
+
+
 
 ## 7. Industry use cases
 
@@ -373,68 +406,84 @@ Console app (in-memory) with packages:
 
 ---
 
+
+
 ## 8. Common mistakes
 
-| Mistake | Fix |
-|--------|-----|
-| Deep inheritance trees for convenience | Prefer composition; keep hierarchies shallow |
-| Public fields everywhere | Make fields private; expose behavior |
-| Anemic objects + all logic in `main` | Put behavior next to data when it belongs there; services for workflows |
-| Overusing getters/setters with no rules | Enforce invariants in methods |
-| Incorrect `equals`/`hashCode` | Follow the contract; include same fields |
-| “Interface for every class” cargo cult | Introduce interfaces at real variation/seams |
-| God class (`LibraryManager` does everything) | Split model vs service vs UI |
-| Using inheritance only to reuse fields | Shared data ≠ is-a relationship |
-| Ignoring `super()` constructor rules | Understand constructor chaining |
-| Mutable shared objects leaking out | Return copies or unmodifiable views later (collections topic) |
+
+| Mistake                                      | Fix                                                                     |
+| -------------------------------------------- | ----------------------------------------------------------------------- |
+| Deep inheritance trees for convenience       | Prefer composition; keep hierarchies shallow                            |
+| Public fields everywhere                     | Make fields private; expose behavior                                    |
+| Anemic objects + all logic in `main`         | Put behavior next to data when it belongs there; services for workflows |
+| Overusing getters/setters with no rules      | Enforce invariants in methods                                           |
+| Incorrect `equals`/`hashCode`                | Follow the contract; include same fields                                |
+| “Interface for every class” cargo cult       | Introduce interfaces at real variation/seams                            |
+| God class (`LibraryManager` does everything) | Split model vs service vs UI                                            |
+| Using inheritance only to reuse fields       | Shared data ≠ is-a relationship                                         |
+| Ignoring `super()` constructor rules         | Understand constructor chaining                                         |
+| Mutable shared objects leaking out           | Return copies or unmodifiable views later (collections topic)           |
+
 
 ---
+
+
 
 ## 9. Best free resources
 
 > **Primary use:** Learn links are already on each day in **§4**. Use this table only as a backup index.
 
-| Resource | Use for |
-|----------|---------|
-| [Oracle Tutorials — Object-Oriented Programming Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/index.html) | Pillars overview |
-| [Oracle Tutorials — Classes & Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html) | Core OO trail |
-| [Oracle Tutorials — Interfaces & Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/index.html) | Interfaces & inheritance |
-| [dev.java — OOP](https://dev.java/learn/) | Modern explanations |
-| [Effective Java (book, not free fully)](https://www.oracle.com/java/technologies/java-books.html) | Optional later depth—prefer free tutorials first |
+
+| Resource                                                                                                                    | Use for                                          |
+| --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [Oracle Tutorials — Object-Oriented Programming Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/index.html) | Pillars overview                                 |
+| [Oracle Tutorials — Classes & Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)                      | Core OO trail                                    |
+| [Oracle Tutorials — Interfaces & Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)                | Interfaces & inheritance                         |
+| [dev.java — OOP](https://dev.java/learn/)                                                                                   | Modern explanations                              |
+| [Effective Java (book, not free fully)](https://www.oracle.com/java/technologies/java-books.html)                           | Optional later depth—prefer free tutorials first |
+
 
 ---
+
+
 
 ## 10. Documentation links (real URLs)
 
 > **Primary use:** Learn links are already on each day in **§4**. Use this as backup index.
 
-- OOP concepts: https://docs.oracle.com/javase/tutorial/java/concepts/index.html
-- Classes: https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html
-- Constructors: https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html
-- Inheritance: https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
-- Polymorphism: https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html
-- Abstract methods/classes: https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html
-- Interfaces: https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
-- `Object` API: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html
-- `Override` annotation: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html
-- Nested classes: https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html
-- Access control: https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+- OOP concepts: [https://docs.oracle.com/javase/tutorial/java/concepts/index.html](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
+- Classes: [https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html)
+- Constructors: [https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html)
+- Inheritance: [https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+- Polymorphism: [https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+- Abstract methods/classes: [https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+- Interfaces: [https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+- `Object` API: [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html)
+- `Override` annotation: [https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
+- Nested classes: [https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
+- Access control: [https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 
 ---
+
+
 
 ## 11. Practice roadmap
 
-| Stage | Goal | Exit criteria |
-|-------|------|----------------|
-| 1. Objects | Create/use classes fluently | 5 small models built |
-| 2. Encapsulation | Invariants held | No public mutable fields in projects |
-| 3. Inheritance/poly | Override + polymorphic calls | Shape/Employee demos work |
-| 4. Interfaces | Design by contract | ≥2 interfaces in project |
-| 5. Relationships | Correct has-a modeling | Composition demo + notes |
-| 6. Project | Layered packages | Mini Library/Shop complete |
-| 7. Gate | Ready for Collections | Checklist ≥90% |
+
+| Stage               | Goal                         | Exit criteria                        |
+| ------------------- | ---------------------------- | ------------------------------------ |
+| 1. Objects          | Create/use classes fluently  | 5 small models built                 |
+| 2. Encapsulation    | Invariants held              | No public mutable fields in projects |
+| 3. Inheritance/poly | Override + polymorphic calls | Shape/Employee demos work            |
+| 4. Interfaces       | Design by contract           | ≥2 interfaces in project             |
+| 5. Relationships    | Correct has-a modeling       | Composition demo + notes             |
+| 6. Project          | Layered packages             | Mini Library/Shop complete           |
+| 7. Gate             | Ready for Collections        | Checklist ≥90%                       |
+
 
 ---
+
+
 
 ## 12. Mastery checklist
 
