@@ -11,8 +11,10 @@ Build a console shop with `Product`, `Customer`, `Order`, and `OrderService`. Ap
 
 ## Prerequisites
 
-- [ ] OOP encapsulation + interfaces (Week 2–3)
-- [ ] Mini Library recommended first; this is the alternative/companion project
+- [x] OOP encapsulation + interfaces (Week 2–3)
+- [x] Mini Library recommended first; this is the alternative/companion project
+
+
 
 ## Learn (open before coding)
 
@@ -21,6 +23,8 @@ Build a console shop with `Product`, `Customer`, `Order`, and `OrderService`. Ap
 - [Classes & Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
 - [Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
 - [Access Control](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
+
+
 
 ## Project layout
 
@@ -44,7 +48,11 @@ mini-shop/
         BulkDiscount.java
 ```
 
+
+
 ## Build steps
+
+
 
 ### Step 1 — Models with encapsulation
 
@@ -56,21 +64,30 @@ mini-shop/
   javac -d out src/com/learn/shop/model/*.java src/com/learn/shop/app/Main.java
   java -cp out com.learn.shop.app.Main
   ```
+
 - **Done when:** Invalid price/stock rejected; valid products construct.
+
+
 
 ### Step 2 — Order & line items (composition)
 
 - [ ] `OrderLine`: productId, quantity, unitPrice snapshot
 - [ ] `Order`: orderId, customerId, list/array of lines, status (OPEN/PAID)
 - [ ] Order “has” lines (composition)—lines don’t exist without the order conceptually
+
 - **Done when:** You can build an order with 2 lines in code.
+
+
 
 ### Step 3 — Catalog in `OrderService`
 
 - [ ] Service holds products + customers + orders
 - [ ] `addProduct`, `registerCustomer`, `listProducts`
 - [ ] Menu wiring for catalog ops
+
 - **Done when:** Add 3 products via menu; list shows them.
+
+
 
 ### Step 4 — Place order (stock rules)
 
@@ -79,7 +96,10 @@ mini-shop/
   - Validate stock ≥ qty; decrement stock
   - Create `Order` with line snapshots
 - [ ] Reject oversell with clear message
+
 - **Done when:** Ordering 2 of stock 1 fails; valid order reduces stock.
+
+
 
 ### Step 5 — `DiscountPolicy` interface
 
@@ -89,28 +109,40 @@ mini-shop/
   - `PercentDiscount(percent)` → e.g. 10% off
   - `BulkDiscount` → if total qty ≥ N, apply percent or flat off
 - [ ] Service field `DiscountPolicy policy` settable via constructor or setter
+
 - **Done when:** Same order subtotal yields different totals under two policies.
+
+
 
 ### Step 6 — Polymorphic checkout
 
 - [ ] `checkout(orderId)` computes subtotal → `policy.apply(...)` → store/print total
 - [ ] Call site uses `DiscountPolicy` reference only (no `instanceof` for apply)
 - [ ] Menu: choose policy (None / Percent / Bulk) before checkout
+
 - **Done when:** Switching policy changes payable amount without rewriting checkout logic.
+
+
 
 ### Step 7 — List orders & harden
 
 - [ ] List orders with customer, lines, subtotal, discount total
 - [ ] Handle missing ids, qty ≤ 0, empty cart
 - [ ] Keep `Main` free of pricing formulas
+
 - **Done when:** Bad input doesn’t crash; happy path end-to-end works.
+
+
 
 ### Step 8 — README & demo data
 
 - [ ] Seed 3 products + 1 customer on startup
 - [ ] Document compile/run + discount examples
 - [ ] Note: money as `double` is OK for learning; mention `BigDecimal` for later
+
 - **Done when:** Fresh run demos discount switch in <2 minutes.
+
+
 
 ## Definition of Done
 
@@ -119,6 +151,8 @@ mini-shop/
 - [ ] `DiscountPolicy` with ≥2 implementations used polymorphically
 - [ ] Thin UI; service owns rules
 - [ ] README verified
+
+
 
 ## Demo script
 
@@ -129,15 +163,21 @@ mini-shop/
 5. New order with BulkDiscount → show different rule firing
 6. Attempt oversell → rejected
 
+
+
 ## Common mistakes
 
-| Mistake | Fix |
-|--------|-----|
+
+| Mistake                                        | Fix                           |
+| ---------------------------------------------- | ----------------------------- |
 | Discount `if/else` on string codes in checkout | Use interface implementations |
-| Mutating product price on the line incorrectly | Snapshot unit price on line |
-| Negative stock | Validate before decrement |
-| UI computes totals | Service + policy only |
-| God `OrderService` + UI mixed | Split packages |
+| Mutating product price on the line incorrectly | Snapshot unit price on line   |
+| Negative stock                                 | Validate before decrement     |
+| UI computes totals                             | Service + policy only         |
+| God `OrderService` + UI mixed                  | Split packages                |
+
+
+
 
 ## After this
 

@@ -154,62 +154,62 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ### Week 2 — Inheritance & polymorphism (Days 8–14)
 
-- [ ] **Day 8 — Inheritance hierarchy**
-  - [ ] **Learn:** [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) · [Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
-  - [ ] **Practice:** `Vehicle` → `Car` / `Bike`
+- [x] **Day 8 — Inheritance hierarchy**
+  - [x] **Learn:** [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) · [Overriding and Hiding Methods](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
+  - [x] **Practice:** `Vehicle` → `Car` / `Bike`
     1. Create `Vehicle` with `brand`, `year`, constructor, `describe()`.
     2. Create `Car` (extra `doors`) and `Bike` (extra `hasBasket`) extending `Vehicle`.
     3. Subclass constructors call `super(brand, year)`.
     4. In `main`, construct one of each and print shared + specific fields.
     5. **Done when:** Both subclasses compile and reuse parent fields via `super`.
 
-- [ ] **Day 9 — Overriding &** `super`
-  - [ ] **Learn:** [Using the Keyword](https://docs.oracle.com/javase/tutorial/java/IandI/super.html) `super` · `@Override` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
-  - [ ] **Practice:** Override with `@Override` and `super`
+- [x] **Day 9 — Overriding &** `super`
+  - [x] **Learn:** [Using the Keyword](https://docs.oracle.com/javase/tutorial/java/IandI/super.html) `super` · `@Override` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html)
+  - [x] **Practice:** Override with `@Override` and `super`
     1. Override `describe()` in `Car` and `Bike`; each calls `super.describe()` then appends subclass info.
     2. Annotate every override with `@Override`.
     3. Intentionally misspell a method name once — confirm `@Override` fails compile — then fix.
     4. Print both subclass describes.
     5. **Done when:** Output includes parent + child text and all overrides are annotated.
 
-- [ ] **Day 10 — Runtime polymorphism**
-  - [ ] **Learn:** [Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
-  - [ ] **Practice:** Polymorphic array loop
+- [x] **Day 10 — Runtime polymorphism**
+  - [x] **Learn:** [Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+  - [x] **Practice:** Polymorphic array loop
     1. Create `Vehicle[] fleet = { new Car(...), new Bike(...), new Car(...) };`
     2. Loop with enhanced-for and call `describe()` on each `Vehicle` reference.
     3. Add abstract-feeling method `start()` on `Vehicle` (concrete for now) overridden differently in each subclass.
     4. Confirm the loop invokes subclass versions (different print text).
     5. **Done when:** One loop, three different runtime behaviors, no `instanceof` required.
 
-- [ ] **Day 11 — Abstract classes**
-  - [ ] **Learn:** [Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
-  - [ ] **Practice:** Abstract `Shape` with concrete subclasses
+- [x] **Day 11 — Abstract classes**
+  - [x] **Learn:** [Abstract Methods and Classes](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+  - [x] **Practice:** Abstract `Shape` with concrete subclasses
     1. Create abstract `Shape` with abstract `double area()` and concrete `String name()`.
     2. Implement `Circle` (`radius`) and `Rectangle` (`width`, `height`).
     3. Try `new Shape()` — confirm it does not compile.
     4. Store both in `Shape[]`, print name + area.
     5. **Done when:** Areas match hand math (πr², w×h) and abstract instantiation fails.
 
-- [ ] **Day 12 —** `final` **& stopping inheritance**
-  - [ ] **Learn:** [Writing Final Classes and Methods](https://docs.oracle.com/javase/tutorial/java/IandI/final.html)
-  - [ ] **Practice:** `final` method and class lab
+- [x] **Day 12 —** `final` **& stopping inheritance**
+  - [x] **Learn:** [Writing Final Classes and Methods](https://docs.oracle.com/javase/tutorial/java/IandI/final.html)
+  - [x] **Practice:** `final` method and class lab
     1. Mark `Shape.name()` as `final`; try overriding in `Circle` — fix after seeing compile error.
     2. Create `final class CircleMath` with a static helper; try `extends CircleMath` — note the error.
     3. In notes: 3 sentences on when to stop inheritance (`final` class/method).
     4. **Done when:** Both intentional compile errors are observed and notes exist.
 
-- [ ] **Day 13 —** `equals` **/** `hashCode`
-  - [ ] **Learn:** [Comparing Objects](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html) · `Objects` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html)
-  - [ ] **Practice:** Implement `equals`/`hashCode` for `Book`
+- [x] **Day 13 —** `equals` **/** `hashCode`
+  - [x] **Learn:** [Comparing Objects](https://docs.oracle.com/javase/tutorial/java/IandI/objectclass.html) · `Objects` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Objects.html)
+  - [x] **Practice:** Implement `equals`/`hashCode` for `Book`
     1. Decide identity: two books equal if same `title` + `author.name` (document choice).
     2. Generate or hand-write `equals`/`hashCode` using `Objects.equals` / `Objects.hash`.
     3. Test: `a.equals(b)` true for same data, false for different; `a.equals(null)` false.
     4. Put equal books in a `HashSet` and print `size()` (expect 1 if truly equal).
     5. **Done when:** Equality tests pass and `HashSet` collapses duplicates.
 
-- [ ] **Day 14 — Refactor Book domain**
-  - [ ] **Learn:** Re-skim [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) · [Composition over inheritance (design note via OO trail)](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
-  - [ ] **Practice:** Inheritance only where it fits
+- [x] **Day 14 — Refactor Book domain**
+  - [x] **Learn:** Re-skim [Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) · [Composition over inheritance (design note via OO trail)](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
+  - [x] **Practice:** Inheritance only where it fits
     1. Review Week 1 `Book`/`Author` code.
     2. Try sketching `Ebook extends Book` — list what is shared vs awkward.
     3. Either implement a thin `Ebook` **or** write 5–8 sentences explaining why composition/`format` field is better.
@@ -220,59 +220,59 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ### Week 3 — Interfaces & relationships (Days 15–21)
 
-- [ ] **Day 15 — Interfaces as contracts**
-  - [ ] **Learn:** [Defining an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html) · [Implementing an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html)
-  - [ ] **Practice:** Three contracts, three implementors
+- [x] **Day 15 — Interfaces as contracts**
+  - [x] **Learn:** [Defining an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html) · [Implementing an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html)
+  - [x] **Practice:** Three contracts, three implementors
     1. Create interfaces `Payable` (`pay(double amount)`), `Printable` (`print()`), `Storable` (`save()`).
     2. Create `Invoice implements Payable`, `Report implements Printable`, `Document implements Storable`.
     3. Call each through the interface type in `main`.
     4. **Done when:** Three interface-typed variables invoke three implementations.
 
-- [ ] **Day 16 — Multiple interfaces**
-  - [ ] **Learn:** [Interfaces as Types](https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html) · [Implementing an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html)
-  - [ ] **Practice:** One class, multiple roles
+- [x] **Day 16 — Multiple interfaces**
+  - [x] **Learn:** [Interfaces as Types](https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html) · [Implementing an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/usinginterface.html)
+  - [x] **Practice:** One class, multiple roles
     1. Create `SmartDocument implements Printable, Storable`.
     2. Pass the same instance to method `void printIt(Printable p)` and `void storeIt(Storable s)`.
     3. In notes: one sentence per role (“as Printable it… / as Storable it…”).
     4. **Done when:** Same object satisfies both method signatures without casting.
 
-- [ ] **Day 17 — Default methods**
-  - [ ] **Learn:** [Default Methods](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
-  - [ ] **Practice:** Evolve an interface with `default`
+- [x] **Day 17 — Default methods**
+  - [x] **Learn:** [Default Methods](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
+  - [x] **Practice:** Evolve an interface with `default`
     1. Add `default void printHeader()` to `Printable` that prints `"=== REPORT ==="`.
     2. Call `printHeader()` then `print()` on an existing implementor — no class changes required.
     3. Override `printHeader` in one class to customize.
     4. **Done when:** Old implementors still compile and default + override both demo.
 
-- [ ] **Day 18 — Association / aggregation / composition**
-  - [ ] **Learn:** [OOP Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/index.html) · [Nested Classes (ownership feel)](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
-  - [ ] **Practice:** Three relationship demos
+- [x] **Day 18 — Association / aggregation / composition**
+  - [x] **Learn:** [OOP Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/index.html) · [Nested Classes (ownership feel)](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
+  - [x] **Practice:** Three relationship demos
     1. **Association:** `Teacher` knows `Student` (field set from outside; both can live independently).
     2. **Aggregation:** `Department` holds `List<Teacher>` passed in / replaceable.
     3. **Composition:** `House` creates its own `Room[]` in the constructor; rooms are not shared.
     4. Print a one-line comment above each demo naming the relationship.
     5. **Done when:** All three demos run and comments name the relationship correctly.
 
-- [ ] **Day 19 — Composition deep dive**
-  - [ ] **Learn:** Revisit [Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html) · [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
-  - [ ] **Practice:** `Library` → `Shelf` → `Book`
+- [x] **Day 19 — Composition deep dive**
+  - [x] **Learn:** Revisit [Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html) · [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
+  - [x] **Practice:** `Library` → `Shelf` → `Book`
     1. `Shelf` owns a `List<Book>` created inside the shelf; `addBook` / `listBooks`.
     2. `Library` owns a `List<Shelf>` created inside the library; `addShelf` / `totalBooks`.
     3. Do not expose raw mutable lists; return sizes or copies.
     4. Seed 2 shelves, 3+ books; print total.
     5. **Done when:** Totals match seed data and lists are not public fields.
 
-- [ ] **Day 20 — Prefer composition**
-  - [ ] **Learn:** [Inheritance vs other relationships (OO concepts)](https://docs.oracle.com/javase/tutorial/java/concepts/inheritance.html)
-  - [ ] **Practice:** Replace bad inheritance with composition
+- [x] **Day 20 — Prefer composition**
+  - [x] **Learn:** [Inheritance vs other relationships (OO concepts)](https://docs.oracle.com/javase/tutorial/java/concepts/inheritance.html)
+  - [x] **Practice:** Replace bad inheritance with composition
     1. Start with a deliberate misuse: `class Stack extends ArrayList` (or similar) — note why it’s wrong in a comment.
     2. Rewrite as `class Stack { private final Deque<String> data = new ArrayDeque<>(); }` with `push`/`pop`/`peek`.
     3. Optionally expose behavior via a small interface `LIFO`.
     4. **Done when:** Misuse version is deleted or commented out; composition version passes push/pop tests.
 
-- [ ] **Day 21 — Design sketch**
-  - [ ] **Learn:** Skim [Interfaces & Inheritance trail](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)
-  - [ ] **Practice:** UML-ish sketch for mini-project
+- [x] **Day 21 — Design sketch**
+  - [x] **Learn:** Skim [Interfaces & Inheritance trail](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)
+  - [x] **Practice:** UML-ish sketch for mini-project
     1. Choose Library **or** Shop for Week 4.
     2. On paper/notes: boxes for packages `model`, `service`, `app`.
     3. List 4–6 classes and 2–3 interfaces; draw arrows (extends / implements / uses).
@@ -283,52 +283,52 @@ Mastering OOP here means Phase 1’s library project and every later Spring/JPA 
 
 ### Week 4 — OOP project & polish (Days 22–28)
 
-- [ ] **Day 22 — Project packages**
-  - [ ] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html) · [OO trail hub](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
-  - [ ] **Practice:** Scaffold Library/Shop packages
+- [x] **Day 22 — Project packages**
+  - [x] **Learn:** [Creating and Using Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html) · [OO trail hub](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+  - [x] **Practice:** Scaffold Library/Shop packages
     1. Create `src/com/learn/oop/{model,service,app}`.
     2. Add empty/`TODO` classes matching your Day 21 sketch (at least 3 model types).
     3. Create `app.Main` with a while-loop menu skeleton (stubs only).
     4. Compile/run from IDE or CLI with packages.
     5. **Done when:** Menu prints and quits; packages compile.
 
-- [ ] **Day 23 — Entities & validation**
-  - [ ] **Learn:** [Constructors](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html) · [Access Control](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
-  - [ ] **Practice:** Entities with invariants
+- [x] **Day 23 — Entities & validation**
+  - [x] **Learn:** [Constructors](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html) · [Access Control](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
+  - [x] **Practice:** Entities with invariants
     1. Implement core entities (e.g. `Book`, `Member` or `Product`, `Customer`) with private fields.
     2. Validate in constructors/setters (non-blank ids/names, non-negative prices/stock).
     3. Override `toString` on each entity.
     4. Unit-smoke in `main`: construct valid + catch one invalid.
     5. **Done when:** Invalid construction fails loudly; valid objects print cleanly.
 
-- [ ] **Day 24 — Thin UI, clear services**
-  - [ ] **Learn:** Re-skim [Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
-  - [ ] **Practice:** Move rules into `service`
+- [x] **Day 24 — Thin UI, clear services**
+  - [x] **Learn:** Re-skim [Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+  - [x] **Practice:** Move rules into `service`
     1. Create e.g. `LibraryService` / `ShopService` with methods `add…`, `list…`, `find…`.
     2. Store data in service fields (`List`/`Map`) — not in `Main`.
     3. `Main` only reads input and calls service methods.
     4. Confirm `Main` has no business `if` rules beyond menu routing.
     5. **Done when:** Add + list work via service; `Main` stays thin.
 
-- [ ] **Day 25 — Behavior interfaces**
-  - [ ] **Learn:** [Defining an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
-  - [ ] **Practice:** `Borrowable` / `Searchable` (or shop equivalents)
+- [x] **Day 25 — Behavior interfaces**
+  - [x] **Learn:** [Defining an Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+  - [x] **Practice:** `Borrowable` / `Searchable` (or shop equivalents)
     1. Define `Searchable` with `boolean matches(String query)`.
     2. Define domain behavior interface (`Borrowable` or `Purchasable`).
     3. Implement on model classes; service methods accept interface types where useful.
     4. **Done when:** At least one service method parameter is an interface type.
 
-- [ ] **Day 26 — Polymorphic menu paths**
-  - [ ] **Learn:** [Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
-  - [ ] **Practice:** Menu operates via interfaces
+- [x] **Day 26 — Polymorphic menu paths**
+  - [x] **Learn:** [Polymorphism](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
+  - [x] **Practice:** Menu operates via interfaces
     1. Add menu option that lists all `Searchable` items matching a query.
     2. Hold mixed types in a `List<Searchable>` (or similar) and loop polymorphically.
     3. Avoid `instanceof` chains for the happy path.
     4. **Done when:** Query path works for 2+ concrete types through one interface.
 
-- [ ] **Day 27 — Harden & rename**
-  - [ ] **Learn:** [Google Java Style Guide (skim)](https://google.github.io/styleguide/javaguide.html)
-  - [ ] **Practice:** Edge cases and cleanup
+- [x] **Day 27 — Harden & rename**
+  - [x] **Learn:** [Google Java Style Guide (skim)](https://google.github.io/styleguide/javaguide.html)
+  - [x] **Practice:** Edge cases and cleanup
     1. Handle empty lists, missing ids, blank input (re-prompt or clear message).
     2. Rename unclear classes/methods; split any “god” class (>200 lines / mixed concerns).
     3. Re-run full menu walkthrough.
@@ -487,17 +487,17 @@ Console app (in-memory) with packages:
 
 ## 12. Mastery checklist
 
-- [ ] Explains class vs object with a domain example
-- [ ] Writes constructors (default, parameterized, chaining)
-- [ ] Uses access modifiers intentionally
-- [ ] Encapsulates state and validates updates
-- [ ] Implements inheritance and overriding correctly (`@Override`)
-- [ ] Demonstrates runtime polymorphism
-- [ ] Uses abstract classes appropriately
-- [ ] Designs and implements interfaces (including default methods awareness)
-- [ ] Distinguishes association, aggregation, and composition in code
-- [ ] Prefers composition when inheritance is a stretch
-- [ ] Structures packages: model / service / app (or equivalent)
-- [ ] Completed the OOP mini-project with a thin UI layer
-- [ ] Can sketch a simple class diagram for their project
-- [ ] Ready to start [03-collections.md](03-collections.md)
+- [x] Explains class vs object with a domain example
+- [x] Writes constructors (default, parameterized, chaining)
+- [x] Uses access modifiers intentionally
+- [x] Encapsulates state and validates updates
+- [x] Implements inheritance and overriding correctly (`@Override`)
+- [x] Demonstrates runtime polymorphism
+- [x] Uses abstract classes appropriately
+- [x] Designs and implements interfaces (including default methods awareness)
+- [x] Distinguishes association, aggregation, and composition in code
+- [x] Prefers composition when inheritance is a stretch
+- [x] Structures packages: model / service / app (or equivalent)
+- [x] Completed the OOP mini-project with a thin UI layer
+- [x] Can sketch a simple class diagram for their project
+- [x] Ready to start [03-collections.md](03-collections.md)
