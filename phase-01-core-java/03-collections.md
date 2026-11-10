@@ -81,27 +81,27 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
 
 ### Week 1 — Lists & generics (Days 1–7)
 
-- [ ] **Day 1 — Hierarchy & ArrayList**
-  - [ ] **Learn:** [Introduction to Collections](https://docs.oracle.com/javase/tutorial/collections/intro/index.html) · [List Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html) · [`ArrayList` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html)
-  - [ ] **Practice:** Hierarchy sketch + ArrayList CRUD
+- [x] **Day 1 — Hierarchy & ArrayList**
+  - [x] **Learn:** [Introduction to Collections](https://docs.oracle.com/javase/tutorial/collections/intro/index.html) · [List Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html) · `ArrayList` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html)
+  - [x] **Practice:** Hierarchy sketch + ArrayList CRUD
     1. In notes, sketch: `Collection` → `List`/`Set`/`Queue`; `Map` separate; note `ArrayList` under `List`.
     2. Create `ArrayListLab.java` with `List<String> names = new ArrayList<>();`
     3. `add` three names; `get(0)`; `set(1, …)`; `remove(0)`; print `size()` after each change.
     4. Loop with enhanced-for and print remaining names.
     5. **Done when:** Notes sketch exists and CRUD sequence prints expected sizes.
 
-- [ ] **Day 2 — Generics basics**
-  - [ ] **Learn:** [Generics lesson](https://docs.oracle.com/javase/tutorial/java/generics/index.html) · [Generic Types](https://docs.oracle.com/javase/tutorial/java/generics/types.html) · [Type Inference / Diamond](https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html)
-  - [ ] **Practice:** Parameterized lists only (no raw types)
+- [x] **Day 2 — Generics basics**
+  - [x] **Learn:** [Generics lesson](https://docs.oracle.com/javase/tutorial/java/generics/index.html) · [Generic Types](https://docs.oracle.com/javase/tutorial/java/generics/types.html) · [Type Inference / Diamond](https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html)
+  - [x] **Practice:** Parameterized lists only (no raw types)
     1. Write `List<Integer> nums = new ArrayList<>();` (diamond).
     2. Add ints; try `nums.add("oops")` — confirm compile error; remove it.
     3. Once, declare a raw `List raw = new ArrayList(); raw.add("x");` then assign/get into typed list — note the warning/`ClassCastException` risk.
     4. Fix everything back to fully parameterized code.
     5. **Done when:** Only typed lists remain and you noted why raw types are banned.
 
-- [ ] **Day 3 — List algorithms**
-  - [ ] **Learn:** [Algorithms](https://docs.oracle.com/javase/tutorial/collections/algorithms/index.html) · [`List` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
-  - [ ] **Practice:** Reverse, frequency, safe remove
+- [x] **Day 3 — List algorithms**
+  - [x] **Learn:** [Algorithms](https://docs.oracle.com/javase/tutorial/collections/algorithms/index.html) · `List` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)
+  - [x] **Practice:** Reverse, frequency, safe remove
     1. Create `List<Integer>` with duplicates; reverse with a loop (or `Collections.reverse`) and print.
     2. Count frequency of a target value with a loop.
     3. Remove all even numbers using an `Iterator` (or index loop carefully).
@@ -109,7 +109,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     5. **Done when:** Reverse + count correct; both removal styles leave only odds.
 
 - [ ] **Day 4 — LinkedList / Deque**
-  - [ ] **Learn:** [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html) · [`LinkedList` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) · [`Deque` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html)
+  - [ ] **Learn:** [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html) · `LinkedList` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) · `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html)
   - [ ] **Practice:** LinkedList as List and Deque
     1. Use `LinkedList<String>` as `List`: add/get/remove by index.
     2. Use same type as `Deque`: `addFirst`, `addLast`, `pollFirst`, `pollLast`.
@@ -126,7 +126,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Three scenarios + default rule are written.
 
 - [ ] **Day 6 — Iterator & safe removal**
-  - [ ] **Learn:** [Iterators](https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html) · [`Iterator` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html)
+  - [ ] **Learn:** [Iterators](https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html) · `Iterator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html)
   - [ ] **Practice:** Iterator remove vs ConcurrentModificationException
     1. Build a list of names; use `Iterator` + `it.remove()` to drop names starting with `"A"`.
     2. Copy the list; in enhanced-for call `list.remove(...)` — catch `ConcurrentModificationException`.
@@ -145,7 +145,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
 ### Week 2 — Sets & Maps (Days 8–14)
 
 - [ ] **Day 8 — HashSet uniqueness**
-  - [ ] **Learn:** [Set Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) · [`HashSet` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html)
+  - [ ] **Learn:** [Set Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) · `HashSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html)
   - [ ] **Practice:** HashSet uniqueness and broken equals/hashCode
     1. Add duplicate strings to `HashSet`; print `size()` (expect unique count).
     2. Create class `Item` with `id` but **only** `equals` (no `hashCode`) — add equal items; observe duplicates possible.
@@ -153,7 +153,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Broken case shows duplicates; fixed case size is 1 for equals items.
 
 - [ ] **Day 9 — TreeSet & Comparable**
-  - [ ] **Learn:** [SortedSet](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-set.html) · [`Comparable` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html) · [`TreeSet` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html)
+  - [ ] **Learn:** [SortedSet](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-set.html) · `Comparable` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html) · `TreeSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html)
   - [ ] **Practice:** Natural order with Comparable
     1. Create `Student` with `name`, `score`; implement `Comparable<Student>` by score then name.
     2. Add several students to `TreeSet<Student>`; print in order.
@@ -161,7 +161,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Printed order matches your compare rules.
 
 - [ ] **Day 10 — Comparator sorting**
-  - [ ] **Learn:** [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html) · [`Comparator` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
+  - [ ] **Learn:** [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html) · `Comparator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
   - [ ] **Practice:** Multi-field Comparator
     1. Create `Employee` with `name`, `salary` (no need for Comparable).
     2. Sort `List<Employee>` with `Comparator.comparingDouble(Employee::getSalary).thenComparing(Employee::getName)`.
@@ -169,7 +169,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Both sort orders match expectations for your sample data.
 
 - [ ] **Day 11 — HashMap basics**
-  - [ ] **Learn:** [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) · [`HashMap` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html)
+  - [ ] **Learn:** [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) · `HashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html)
   - [ ] **Practice:** put / get / entrySet
     1. `Map<String, Integer> ages = new HashMap<>();` put 4 entries.
     2. `get`, `containsKey`, `getOrDefault` for missing key.
@@ -185,7 +185,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Frequencies and groups match manual counts for your sample.
 
 - [ ] **Day 13 — TreeMap navigation**
-  - [ ] **Learn:** [SortedMap](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html) · [`TreeMap` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html)
+  - [ ] **Learn:** [SortedMap](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html) · `TreeMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html)
   - [ ] **Practice:** Sorted key navigation
     1. Put several string→value pairs in `TreeMap`.
     2. Print `firstKey()`, `lastKey()`, `higherKey(...)`, `lowerKey(...)`.
@@ -193,7 +193,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Navigation results match sorted key order.
 
 - [ ] **Day 14 — LinkedHashMap & review**
-  - [ ] **Learn:** [`LinkedHashMap` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html) · [Map Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
+  - [ ] **Learn:** `LinkedHashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html) · [Map Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
   - [ ] **Practice:** Insertion-order report + week review
     1. Build a report map with `LinkedHashMap`; put keys in a deliberate order; print — confirm order.
     2. Contrast with `HashMap` print order (may differ).
@@ -203,7 +203,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
 ### Week 3 — Queues, stacks, deeper maps (Days 15–21)
 
 - [ ] **Day 15 — Queue & ArrayDeque**
-  - [ ] **Learn:** [Queue Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/queue.html) · [`ArrayDeque` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayDeque.html)
+  - [ ] **Learn:** [Queue Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/queue.html) · `ArrayDeque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayDeque.html)
   - [ ] **Practice:** Queue offer / poll / peek
     1. `Queue<String> q = new ArrayDeque<>();`
     2. `offer` three tasks; `peek` without removing; `poll` until empty.
@@ -211,7 +211,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Peek leaves size unchanged; poll drains FIFO.
 
 - [ ] **Day 16 — Stack via Deque**
-  - [ ] **Learn:** [`Deque` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html) · Prefer Deque over legacy `Stack` (see API notes)
+  - [ ] **Learn:** `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html) · Prefer Deque over legacy `Stack` (see API notes)
   - [ ] **Practice:** Stack + balanced parentheses
     1. Use `Deque<Character>` as stack: `push`/`pop`/`peek` (or `addFirst`/`removeFirst`).
     2. Write `boolean isBalanced(String s)` for `()[]{}`.
@@ -219,7 +219,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** All four test cases return correct booleans.
 
 - [ ] **Day 17 — PriorityQueue**
-  - [ ] **Learn:** [`PriorityQueue` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html) · [Queue Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/queue.html)
+  - [ ] **Learn:** `PriorityQueue` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html) · [Queue Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/queue.html)
   - [ ] **Practice:** Top-K / next-task scheduling
     1. Create tasks with priority int; `PriorityQueue` ordered by priority.
     2. Offer several; poll and print next-to-run order.
@@ -227,7 +227,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Poll order matches priorities; top-K matches hand calculation.
 
 - [ ] **Day 18 — HashMap internals sketch**
-  - [ ] **Learn:** [`HashMap` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html) (read class-level docs) · [HashMap (Oracle tutorial implementations)](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
+  - [ ] **Learn:** `HashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html) (read class-level docs) · [HashMap (Oracle tutorial implementations)](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
   - [ ] **Practice:** Buckets / hash / collisions note
     1. Draw array of buckets; show key → hash → index.
     2. Draw two keys colliding in one bucket (chain/tree idea — high level).
@@ -235,7 +235,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Diagram + paragraph exist (no need for real JDK source diving).
 
 - [ ] **Day 19 — ArrayList capacity growth**
-  - [ ] **Learn:** [`ArrayList` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) · [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html)
+  - [ ] **Learn:** `ArrayList` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) · [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html)
   - [ ] **Practice:** Capacity vs size notes
     1. Draw: empty list → add until grow → new larger array copy.
     2. Call `ensureCapacity(100)` then add 50 elements; note why pre-sizing helps.
@@ -243,7 +243,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Notes distinguish size vs capacity and mention growth copy cost.
 
 - [ ] **Day 20 — Unmodifiable collections**
-  - [ ] **Learn:** [`Collections` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html) · [`List.copyOf`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html#copyOf(java.util.Collection))
+  - [ ] **Learn:** `Collections` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html) · [`List.copyOf`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html#copyOf(java.util.Collection))
   - [ ] **Practice:** Unmodifiable views and copyOf
     1. Create mutable list; wrap with `Collections.unmodifiableList`; try `add` — catch `UnsupportedOperationException`.
     2. Mutate the **original** list; observe the view changes (aliasing).
@@ -278,7 +278,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Tag search returns only tagged items.
 
 - [ ] **Day 24 — Priority feature**
-  - [ ] **Learn:** [`PriorityQueue` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html)
+  - [ ] **Learn:** `PriorityQueue` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html)
   - [ ] **Practice:** Urgent tasks via PriorityQueue
     1. Model `Task` with priority; hold pending work in `PriorityQueue`.
     2. Menu: add task; “next urgent” polls highest priority.
@@ -286,7 +286,7 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. **Done when:** Poll order matches priorities.
 
 - [ ] **Day 25 — Sorting UI options**
-  - [ ] **Learn:** [`Comparator` API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html) · [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html)
+  - [ ] **Learn:** `Comparator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html) · [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html)
   - [ ] **Practice:** Sort menu options
     1. Menu choices: sort by name, by id, by priority/price.
     2. Each choice applies a different `Comparator` and prints the list.
