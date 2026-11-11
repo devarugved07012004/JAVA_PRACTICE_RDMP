@@ -108,34 +108,34 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     4. Redo even-removal once with `list.removeIf(n -> n % 2 == 0)`.
     5. **Done when:** Reverse + count correct; both removal styles leave only odds.
 
-- [ ] **Day 4 — LinkedList / Deque**
-  - [ ] **Learn:** [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html) · `LinkedList` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) · `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html)
-  - [ ] **Practice:** LinkedList as List and Deque
+- [x] **Day 4 — LinkedList / Deque**
+  - [x] **Learn:** [List Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html) · `LinkedList` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) · `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html)
+  - [x] **Practice:** LinkedList as List and Deque
     1. Use `LinkedList<String>` as `List`: add/get/remove by index.
     2. Use same type as `Deque`: `addFirst`, `addLast`, `pollFirst`, `pollLast`.
     3. Print after each deque op so order is obvious.
     4. Optional: time 10_000 mid-list inserts vs `ArrayList` (rough `System.nanoTime`).
     5. **Done when:** Deque ops demonstrate front/back behavior clearly.
 
-- [ ] **Day 5 — Choosing ArrayList**
-  - [ ] **Learn:** [Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/index.html) · Re-skim [List](https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html)
-  - [ ] **Practice:** Decision notes for ArrayList
+- [x] **Day 5 — Choosing ArrayList**
+  - [x] **Learn:** [Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/index.html) · Re-skim [List](https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html)
+  - [x] **Practice:** Decision notes for ArrayList
     1. Write 3 scenarios (e.g. random access report, queue-like work, frequent head inserts).
     2. For each, pick `ArrayList` / `LinkedList` / `ArrayDeque` and one-sentence why.
     3. Default rule in notes: “For `List`, start with `ArrayList` unless …”
     4. **Done when:** Three scenarios + default rule are written.
 
-- [ ] **Day 6 — Iterator & safe removal**
-  - [ ] **Learn:** [Iterators](https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html) · `Iterator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html)
-  - [ ] **Practice:** Iterator remove vs ConcurrentModificationException
+- [x] **Day 6 — Iterator & safe removal**
+  - [x] **Learn:** [Iterators](https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html) · `Iterator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html)
+  - [x] **Practice:** Iterator remove vs ConcurrentModificationException
     1. Build a list of names; use `Iterator` + `it.remove()` to drop names starting with `"A"`.
     2. Copy the list; in enhanced-for call `list.remove(...)` — catch `ConcurrentModificationException`.
     3. Write 2 sentences: when enhanced-for remove fails; when Iterator is safe.
     4. **Done when:** Safe path works; CME demo is observed and noted.
 
-- [ ] **Day 7 — Unique words kata**
-  - [ ] **Learn:** Skim [Collections trail hub](https://docs.oracle.com/javase/tutorial/collections/index.html)
-  - [ ] **Practice:** Order-preserving unique words
+- [x] **Day 7 — Unique words kata**
+  - [x] **Learn:** Skim [Collections trail hub](https://docs.oracle.com/javase/tutorial/collections/index.html)
+  - [x] **Practice:** Order-preserving unique words
     1. Read a sentence string; `split("\\s+")` into words.
     2. Build unique list preserving first-seen order (loop + `contains`, or `LinkedHashSet` then `new ArrayList<>(…)`).
     3. Print original word count vs unique count.
@@ -144,25 +144,25 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
 
 ### Week 2 — Sets & Maps (Days 8–14)
 
-- [ ] **Day 8 — HashSet uniqueness**
-  - [ ] **Learn:** [Set Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) · `HashSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html)
-  - [ ] **Practice:** HashSet uniqueness and broken equals/hashCode
+- [x] **Day 8 — HashSet uniqueness**
+  - [x] **Learn:** [Set Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) · `HashSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html)
+  - [x] **Practice:** HashSet uniqueness and broken equals/hashCode
     1. Add duplicate strings to `HashSet`; print `size()` (expect unique count).
     2. Create class `Item` with `id` but **only** `equals` (no `hashCode`) — add equal items; observe duplicates possible.
     3. Fix with matching `hashCode`; confirm set size collapses.
     4. **Done when:** Broken case shows duplicates; fixed case size is 1 for equals items.
 
-- [ ] **Day 9 — TreeSet & Comparable**
-  - [ ] **Learn:** [SortedSet](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-set.html) · `Comparable` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html) · `TreeSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html)
-  - [ ] **Practice:** Natural order with Comparable
+- [x] **Day 9 — TreeSet & Comparable**
+  - [x] **Learn:** [SortedSet](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-set.html) · `Comparable` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html) · `TreeSet` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html)
+  - [x] **Practice:** Natural order with Comparable
     1. Create `Student` with `name`, `score`; implement `Comparable<Student>` by score then name.
     2. Add several students to `TreeSet<Student>`; print in order.
     3. Try adding a student without Comparable to a raw/wrong TreeSet path — note the failure mode.
     4. **Done when:** Printed order matches your compare rules.
 
-- [ ] **Day 10 — Comparator sorting**
-  - [ ] **Learn:** [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html) · `Comparator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
-  - [ ] **Practice:** Multi-field Comparator
+- [x] **Day 10 — Comparator sorting**
+  - [x] **Learn:** [Object Ordering](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html) · `Comparator` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html)
+  - [x] **Practice:** Multi-field Comparator
     1. Create `Employee` with `name`, `salary` (no need for Comparable).
     2. Sort `List<Employee>` with `Comparator.comparingDouble(Employee::getSalary).thenComparing(Employee::getName)`.
     3. Also sort with a reverse-salary comparator; print both.
