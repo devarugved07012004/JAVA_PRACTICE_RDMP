@@ -168,17 +168,17 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     3. Also sort with a reverse-salary comparator; print both.
     4. **Done when:** Both sort orders match expectations for your sample data.
 
-- [ ] **Day 11 — HashMap basics**
-  - [ ] **Learn:** [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) · `HashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html)
-  - [ ] **Practice:** put / get / entrySet
+- [x] **Day 11 — HashMap basics**
+  - [x] **Learn:** [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) · `HashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html)
+  - [x] **Practice:** put / get / entrySet
     1. `Map<String, Integer> ages = new HashMap<>();` put 4 entries.
     2. `get`, `containsKey`, `getOrDefault` for missing key.
     3. Iterate `ages.entrySet()` and print `key=value`.
     4. **Done when:** Missing key path is safe and entrySet loop prints all pairs.
 
-- [ ] **Day 12 — Frequency & group-by**
-  - [ ] **Learn:** Revisit [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) (compute patterns in Javadoc too)
-  - [ ] **Practice:** Frequency map and group-by lists
+- [x] **Day 12 — Frequency & group-by**
+  - [x] **Learn:** Revisit [Map Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/map.html) (compute patterns in Javadoc too)
+  - [x] **Practice:** Frequency map and group-by lists
     1. Word-frequency: for each word, `map.merge(word, 1, Integer::sum)` (or get/put).
     2. Group students by grade band into `Map<String, List<Student>>`.
     3. Print both structures.
