@@ -184,9 +184,9 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     3. Print both structures.
     4. **Done when:** Frequencies and groups match manual counts for your sample.
 
-- [ ] **Day 13 — TreeMap navigation**
-  - [ ] **Learn:** [SortedMap](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html) · `TreeMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html)
-  - [ ] **Practice:** Sorted key navigation
+- [x] **Day 13 — TreeMap navigation**
+  - [x] **Learn:** [SortedMap](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html) · `TreeMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html)
+  - [x] **Practice:** Sorted key navigation
     1. Put several string→value pairs in `TreeMap`.
     2. Print `firstKey()`, `lastKey()`, `higherKey(...)`, `lowerKey(...)`.
     3. Print a `subMap` (or `headMap`/`tailMap`) range.
