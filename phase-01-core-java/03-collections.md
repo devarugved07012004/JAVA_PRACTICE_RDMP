@@ -192,9 +192,9 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
     3. Print a `subMap` (or `headMap`/`tailMap`) range.
     4. **Done when:** Navigation results match sorted key order.
 
-- [ ] **Day 14 — LinkedHashMap & review**
-  - [ ] **Learn:** `LinkedHashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html) · [Map Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
-  - [ ] **Practice:** Insertion-order report + week review
+- [x] **Day 14 — LinkedHashMap & review**
+  - [x] **Learn:** `LinkedHashMap` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html) · [Map Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/map.html)
+  - [x] **Practice:** Insertion-order report + week review
     1. Build a report map with `LinkedHashMap`; put keys in a deliberate order; print — confirm order.
     2. Contrast with `HashMap` print order (may differ).
     3. Re-solve: unique words (Day 7) and frequency (Day 12) once each without peeking.
@@ -202,25 +202,25 @@ Collections also introduce **generics**, which make APIs type-safe and are requi
 
 ### Week 3 — Queues, stacks, deeper maps (Days 15–21)
 
-- [ ] **Day 15 — Queue & ArrayDeque**
-  - [ ] **Learn:** [Queue Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/queue.html) · `ArrayDeque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayDeque.html)
-  - [ ] **Practice:** Queue offer / poll / peek
+- [x] **Day 15 — Queue & ArrayDeque**
+  - [x] **Learn:** [Queue Interface](https://docs.oracle.com/javase/tutorial/collections/interfaces/queue.html) · `ArrayDeque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayDeque.html)
+  - [x] **Practice:** Queue offer / poll / peek
     1. `Queue<String> q = new ArrayDeque<>();`
     2. `offer` three tasks; `peek` without removing; `poll` until empty.
     3. Print queue state after each op.
     4. **Done when:** Peek leaves size unchanged; poll drains FIFO.
 
-- [ ] **Day 16 — Stack via Deque**
-  - [ ] **Learn:** `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html) · Prefer Deque over legacy `Stack` (see API notes)
-  - [ ] **Practice:** Stack + balanced parentheses
+- [x] **Day 16 — Stack via Deque**
+  - [x] **Learn:** `Deque` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html) · Prefer Deque over legacy `Stack` (see API notes)
+  - [x] **Practice:** Stack + balanced parentheses
     1. Use `Deque<Character>` as stack: `push`/`pop`/`peek` (or `addFirst`/`removeFirst`).
     2. Write `boolean isBalanced(String s)` for `()[]{}`.
     3. Test `"([])"`, `"([)]"`, `"(()"`, `""`.
     4. **Done when:** All four test cases return correct booleans.
 
-- [ ] **Day 17 — PriorityQueue**
-  - [ ] **Learn:** `PriorityQueue` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html) · [Queue Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/queue.html)
-  - [ ] **Practice:** Top-K / next-task scheduling
+- [x] **Day 17 — PriorityQueue**
+  - [x] **Learn:** `PriorityQueue` [API](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html) · [Queue Implementations](https://docs.oracle.com/javase/tutorial/collections/implementations/queue.html)
+  - [x] **Practice:** Top-K / next-task scheduling
     1. Create tasks with priority int; `PriorityQueue` ordered by priority.
     2. Offer several; poll and print next-to-run order.
     3. Top-K: given numbers, keep a min-heap of size K; print top K.
